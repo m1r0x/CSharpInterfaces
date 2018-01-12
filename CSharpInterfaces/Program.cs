@@ -10,6 +10,22 @@ namespace CSharpInterfaces
     {
         static void Main(string[] args)
         {
+            ITier Katze = new Tier();
+            ITier Hund = new Tier();
+
+            List<>
+        }
+    }
+    class Tier : ITier
+    {
+        public string GibLaut
+        {
+            get; set;
+        }
+
+        public int AnzahlBeine()
+        {
+            return
         }
     }
 }
