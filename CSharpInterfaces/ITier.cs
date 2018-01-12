@@ -8,8 +8,8 @@ namespace CSharpInterfaces
 {
     interface ITier
     {
-        string GibLaut { get; set; }
+        string GibLaut();
 
-        int AnzahlBeine();
+        int AnzahlBeine { get; set; }
     }
 }

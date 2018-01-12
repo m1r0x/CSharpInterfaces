@@ -10,22 +10,47 @@ namespace CSharpInterfaces
     {
         static void Main(string[] args)
         {
-            ITier Katze = new Tier();
-            ITier Hund = new Tier();
+            Katze k = new Katze();
+            Hund h = new Hund();
 
-            List<>
+            List<ITier> MyList = new List<ITier>();
+
+            MyList.Add(k);
+            MyList.Add(h);
+            
+
+            foreach(var i in MyList)
+            {
+                Console.WriteLine(i.GibLaut());
+           
+            }
+
+            Console.ReadKey();
         }
     }
-    class Tier : ITier
+    class Katze : ITier
     {
-        public string GibLaut
+        public string GibLaut()
+        {
+            return "Miau";
+        }
+
+        public int AnzahlBeine
         {
             get; set;
         }
+    }
 
-        public int AnzahlBeine()
+    class Hund : ITier
+    {
+        public string GibLaut()
         {
-            return
+            return "Wuff";
+        }
+
+        public int AnzahlBeine
+        {
+            get; set;
         }
     }
 }
